@@ -41,58 +41,6 @@ cd dobugman-ai-debugger
 ```bash
 npm install
 ```
-
-### 3. Set your API key
-
-Create a `.env` file in the root:
-
-```env
-OPENAI_API_KEY=your-openai-key
-```
-
-> You can use any compatible LLM API.
-
-### 4. Run Dobugman on a JavaScript or TypeScript file
-
-```bash
-node dobugman.js path/to/your/file.js
-```
-
----
-
-## 📂 Example
-
-```js
-function claculateArea(wdith, hight) {
-    return wdith * hight;
-}
-
-console.log(claculateArea(5, 10));
-```
-
-Dobugman will output:
-
-```
-[!] Possible typo in function name: 'claculateArea' → 'calculateArea'
-[!] Possible typo in variable: 'wdith' → 'width'
-[!] Possible typo in variable: 'hight' → 'height'
-[⚠] Logic seems correct, but the output may be wrong due to misspellings.
-```
-
----
-
-## 🔧 Configuration
-
-Dobugman can be configured with a `config.json` file:
-
-```json
-{
-  "language": "javascript",
-  "confidenceThreshold": 0.7,
-  "output": "console"
-}
-```
-
 ---
 
 ## 🧪 Supported Languages
